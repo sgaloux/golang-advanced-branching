@@ -163,21 +163,21 @@ func showRating(model string) {
 		}
 	}
 	if !ratingFound {
-		fmt.Print("No rating for this vehicle")
+		fmt.Printf("No rating for this vehicle")
 	}
 }
 
-func carDetails(c *car) {
+func (c *car) carDetails() {
 	fmt.Printf("\n%-5v: %-8v: %-12v ", "Car", c.make, c.model)
 	showRating(c.model)
 }
 
-func bikeDetail(b *bike) {
+func (b *bike) bikeDetails() {
 	fmt.Printf("\n%-5v: %-8v: %-12v ", "Bike", b.make, b.model)
 	showRating(b.model)
 }
 
-func truckDetail(t *truck) {
+func (t *truck) truckDetails() {
 	fmt.Printf("\n%-5v: %-8v: %-12v ", "Truck", t.make, t.model)
 	showRating(t.model)
 }
